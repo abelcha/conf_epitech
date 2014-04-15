@@ -17,6 +17,10 @@
 (setq column-number-mode t)
 ;;(setq line-number-mode t)
 (setq user-full-name "chalie_a")
-;;(setq user-mail-address "chalie_a@epitech.eu")
+(setq user-mail-address "chalie_a@epitech.eu")
 (load-file "~/.emacs.d/std_comment.el")
+(load-file "~/.emacs.d/protection.el")
+(load-file "~/.emacs.d/struct.el")
+(load-file "~/.emacs.d/make.el")
+
 (global-set-key [f11] 'std-file-header)

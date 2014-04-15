@@ -5,21 +5,19 @@
 ;; Login   <abel@chalier.me>
 ;; 
 ;; Started on  Tue Apr 15 06:12:59 2014 chalie_a
-;; Last update Tue Apr 15 08:27:48 2014 chalie_a
+;; Last update Tue Apr 15 08:53:23 2014 chalie_a
 ;;
 
 (global-set-key (kbd"C-c C-w") 'insert-make)
 
 (defun insert-make ()
-  "Inserts a define to protect the header file."
   (interactive)
   (insert (get-make))
   (forward-line -28)
   )
 
 (defun get-make ()
-  "Return a protection for header files."
-  (setq str (read-from-minibuffer
+ (setq str (read-from-minibuffer
                     (format "How do you want to call your list : ")))
   (concat "CC\t=\tclang-g3\n\n"
 	  "NAME\t=\t" str "\n\n"
