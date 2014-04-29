@@ -5,10 +5,10 @@
 ;; Login   <abel@chalier.me>
 ;; 
 ;; Started on  Tue Apr 15 06:12:59 2014 chalie_a
-;; Last update Tue Apr 15 08:53:23 2014 chalie_a
+;; Last update Wed Apr 16 03:05:24 2014 chalie_a
 ;;
 
-(global-set-key (kbd"C-c C-w") 'insert-make)
+(global-set-key (kbd"C-x C-w") 'insert-make)
 
 (defun insert-make ()
   (interactive)

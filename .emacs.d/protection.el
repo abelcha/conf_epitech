@@ -5,10 +5,10 @@
 ;; Login   <abel@chalier.me>
 ;; 
 ;; Started on  Tue Apr 15 06:12:59 2014 chalie_a
-;; Last update Tue Apr 15 08:54:05 2014 chalie_a
+;; Last update Wed Apr 16 03:03:07 2014 chalie_a
 ;;
 
-(global-set-key (kbd"C-c C-j") 'insert-prot)
+(global-set-key (kbd"C-c p") 'insert-prot)
 
 (defun insert-filename ()
   (interactive)

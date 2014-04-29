@@ -5,7 +5,7 @@
 ;; Login   <fred@epita.fr>
 ;;
 ;; Started on  Thu Sep  9 23:34:05 1993 Frederic Denis
-;; Last update Sat Mar  8 20:38:13 2014 chalie_a
+;; Last update Wed Apr 16 02:54:19 2014 chalie_a
 ;;
 ;; Based on Comment routines by Isaac
 ;;
@@ -26,9 +26,9 @@
       header-for	" for "
       header-in		" in "
       domaine-name	"chalier.me")
-(if (setq user-nickname (getenv "USER_NICKNAME"))
+(if (setq user-nickname "chalie_a");;(getenv "USER_NICKNAME"))
     t
-  (setq user-nickname (user-full-name))
+  (setq user-nickname "chalie_a");;(user-full-name))
 )
 
 (setq write-file-hooks (cons 'update-std-header write-file-hooks))
@@ -112,8 +112,8 @@
   (interactive)
   (goto-char (point-min))
   (let ((projname "toto")(location "tiuti"))
-    (setq projname (read-from-minibuffer
-		    (format "Type project name (RETURN to quit) : ")))
+    (setq projname "Project-Master");;(read-from-minibuffer
+		    ;;(format "Type project name (RETURN to quit) : ")))
     (setq location (getenv "PWD"))
 
     (insert-string (std-get 'cs))

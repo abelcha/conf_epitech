@@ -1,4 +1,22 @@
 
+# Hexadécimal vers décimal
+h2d(){
+  echo "ibase=16; $@" | tr -s ' ' ';' | bc
+}
+# Décimal vers hexadécimal
+d2h(){
+  echo "obase=16; $@" | tr -s ' ' ';' | bc
+}
+ 
+# Binaire vers décimal
+b2d(){
+  echo "ibase=2; $@" | tr -s ' ' ';' | bc
+}
+# Décimal vers binaire
+d2b(){
+  echo "obase=2; $@" | tr -s ' ' ';' | bc
+}
+
 ## OVERALL CONDITIONALS {{{
 _islinux=false
 [[ "$(uname -s)" =~ Linux|GNU|GNU/* ]] && _islinux=true
@@ -173,8 +191,10 @@ _isroot=false
 #}}}
 ## ALIAS {{{
   alias freemem='sudo /sbin/sysctl -w vm.drop_caches=3'
-  alias enter_matrix='echo -e "\e[32m"; while :; do for i in {1..16}; do r="$(($RANDOM % 2))"; if [[ $(($RANDOM % 5)) == 1 ]]; then if [[ $(($RANDOM % 4)) == 1 ]]; then v+="\e[1m $r   "; else v+="\e[2m $r   "; fi; else v+="     "; fi; done; echo -e "$v"; v=""; done'
+  alias matrix='echo -e "\e[32m"; while :; do for i in {1..16}; do r="$(($RANDOM % 2))"; if [[ $(($RANDOM % 5)) == 1 ]]; then if [[ $(($RANDOM % 4)) == 1 ]]; then v+="\e[1m $r   "; else v+="\e[2m $r   "; fi; else v+="     "; fi; done; echo -e "$v"; v=""; done'
   # MODIFIED COMMANDS {{{
+  alias rm='rm -fr'
+  alias cp='cp -r'
   alias mk='make re;make clean'
   alias cc='gcc -g3'
   alias kk='clang -g3'
